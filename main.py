@@ -1,9 +1,9 @@
 import pyttsx3
-import self as self
 import speech_recognition as sr
 import webbrowser
 import datetime
 import wikipedia
+from self import self
 
 
 # this method is for taking the commands
@@ -98,7 +98,7 @@ def Hello():
     # This function is for when the assistant
     # is called it will say hello and then
     # take query
-    speak("hello sir I am your desktop assistant. Tell me how may I help you ")
+    speak("hello sir I am your desktop assistant.Tell me how may I help you ")
 
 
 def Take_query():
@@ -134,10 +134,7 @@ def Take_query():
         elif "which day it is" in query:
             tellDay()
             continue
-        elif "open chrome" in query:
-            speak("Opening chrome ")
-            webbrowser.open("www.chrome.cAom")
-            continue
+
         elif "tell me the time" in query:
             tellTime()
             continue
@@ -147,7 +144,7 @@ def Take_query():
             speak("Bye. Check Out GFG for more exciting things")
             exit()
 
-        elif "wikipedia of" in query:
+        elif "from wikipedia" in query:
 
             # if any one wants to have a information
             # from wikipedia
